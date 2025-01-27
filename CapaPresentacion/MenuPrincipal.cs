@@ -16,5 +16,17 @@ namespace CapaPresentacion
         {
             InitializeComponent();
         }
+
+        private void btnOcultarMenu_Click(object sender, EventArgs e)
+        {
+            if(PanelMenu.Width==200)
+            {
+                PanelMenu.Width = 40;
+            }
+            else
+            {
+                PanelMenu.Width=200;
+            }
+        }
     }
 }

@@ -41,6 +41,8 @@
             this.PanelMenuSuperior = new System.Windows.Forms.Panel();
             this.PanelSuperior = new System.Windows.Forms.Panel();
             this.btnOcultarMenu = new FontAwesome.Sharp.IconButton();
+            this.btnInicio = new FontAwesome.Sharp.IconButton();
+            this.PanelInferiorPrincipal = new System.Windows.Forms.Panel();
             this.btnUsuario = new FontAwesome.Sharp.IconButton();
             this.PanelMenu.SuspendLayout();
             this.PanelMenuInferior.SuspendLayout();
@@ -241,8 +243,9 @@
             // 
             this.PanelSuperior.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.PanelSuperior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanelSuperior.Controls.Add(this.btnOcultarMenu);
             this.PanelSuperior.Controls.Add(this.btnUsuario);
+            this.PanelSuperior.Controls.Add(this.btnInicio);
+            this.PanelSuperior.Controls.Add(this.btnOcultarMenu);
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(200, 0);
             this.PanelSuperior.Name = "PanelSuperior";
@@ -267,10 +270,39 @@
             this.btnOcultarMenu.TabIndex = 11;
             this.btnOcultarMenu.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnOcultarMenu.UseVisualStyleBackColor = true;
+            this.btnOcultarMenu.Click += new System.EventHandler(this.btnOcultarMenu_Click);
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.btnInicio.IconColor = System.Drawing.Color.White;
+            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInicio.IconSize = 30;
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(1021, 0);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(52, 40);
+            this.btnInicio.TabIndex = 12;
+            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            // 
+            // PanelInferiorPrincipal
+            // 
+            this.PanelInferiorPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.PanelInferiorPrincipal.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanelInferiorPrincipal.Location = new System.Drawing.Point(200, 680);
+            this.PanelInferiorPrincipal.Name = "PanelInferiorPrincipal";
+            this.PanelInferiorPrincipal.Size = new System.Drawing.Size(1077, 21);
+            this.PanelInferiorPrincipal.TabIndex = 2;
             // 
             // btnUsuario
             // 
-            this.btnUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Right;
             this.btnUsuario.FlatAppearance.BorderSize = 0;
             this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsuario.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -278,13 +310,12 @@
             this.btnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
             this.btnUsuario.IconColor = System.Drawing.Color.White;
             this.btnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuario.IconSize = 25;
+            this.btnUsuario.IconSize = 30;
             this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(872, -1);
+            this.btnUsuario.Location = new System.Drawing.Point(969, 0);
             this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(124, 38);
-            this.btnUsuario.TabIndex = 10;
-            this.btnUsuario.Text = "Usuario";
+            this.btnUsuario.Size = new System.Drawing.Size(52, 40);
+            this.btnUsuario.TabIndex = 13;
             this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnUsuario.UseVisualStyleBackColor = true;
             // 
@@ -294,6 +325,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1277, 701);
+            this.Controls.Add(this.PanelInferiorPrincipal);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
             this.Name = "FrmMenuPrincipal";
@@ -318,8 +350,10 @@
         private FontAwesome.Sharp.IconButton btnProductos;
         private FontAwesome.Sharp.IconButton btnCategorias;
         private FontAwesome.Sharp.IconButton btnProveedores;
-        private FontAwesome.Sharp.IconButton btnUsuario;
         private FontAwesome.Sharp.IconButton btnConfiguracion;
         private FontAwesome.Sharp.IconButton btnOcultarMenu;
+        private FontAwesome.Sharp.IconButton btnInicio;
+        private System.Windows.Forms.Panel PanelInferiorPrincipal;
+        private FontAwesome.Sharp.IconButton btnUsuario;
     }
 }
