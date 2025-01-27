@@ -79,7 +79,7 @@
             this.gboxClientes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.gboxClientes.Location = new System.Drawing.Point(5, 12);
             this.gboxClientes.Name = "gboxClientes";
-            this.gboxClientes.Size = new System.Drawing.Size(1214, 251);
+            this.gboxClientes.Size = new System.Drawing.Size(1154, 251);
             this.gboxClientes.TabIndex = 0;
             this.gboxClientes.TabStop = false;
             this.gboxClientes.Text = "DATOS CLIENTES";
@@ -91,7 +91,7 @@
             this.btnGuardar.IconColor = System.Drawing.Color.MediumSeaGreen;
             this.btnGuardar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnGuardar.IconSize = 35;
-            this.btnGuardar.Location = new System.Drawing.Point(1068, 152);
+            this.btnGuardar.Location = new System.Drawing.Point(1015, 152);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(129, 40);
             this.btnGuardar.TabIndex = 18;
@@ -106,7 +106,7 @@
             this.btnActualizar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnActualizar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnActualizar.IconSize = 35;
-            this.btnActualizar.Location = new System.Drawing.Point(1068, 102);
+            this.btnActualizar.Location = new System.Drawing.Point(1015, 102);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(129, 40);
             this.btnActualizar.TabIndex = 17;
@@ -121,7 +121,7 @@
             this.btnCancelar.IconColor = System.Drawing.Color.Red;
             this.btnCancelar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCancelar.IconSize = 35;
-            this.btnCancelar.Location = new System.Drawing.Point(1068, 50);
+            this.btnCancelar.Location = new System.Drawing.Point(1015, 50);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(129, 40);
             this.btnCancelar.TabIndex = 16;
@@ -286,7 +286,7 @@
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;
             this.dgvClientes.RowTemplate.Height = 24;
-            this.dgvClientes.Size = new System.Drawing.Size(1214, 328);
+            this.dgvClientes.Size = new System.Drawing.Size(1154, 328);
             this.dgvClientes.TabIndex = 1;
             // 
             // btnEliminar
@@ -297,7 +297,7 @@
             this.btnEliminar.IconColor = System.Drawing.Color.Red;
             this.btnEliminar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnEliminar.IconSize = 35;
-            this.btnEliminar.Location = new System.Drawing.Point(1073, 610);
+            this.btnEliminar.Location = new System.Drawing.Point(1020, 610);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(129, 40);
             this.btnEliminar.TabIndex = 19;
@@ -310,10 +310,11 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1226, 662);
+            this.ClientSize = new System.Drawing.Size(1171, 662);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.dgvClientes);
             this.Controls.Add(this.gboxClientes);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientes";
             this.Text = "FrmClientes";
             this.gboxClientes.ResumeLayout(false);

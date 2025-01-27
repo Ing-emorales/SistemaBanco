@@ -40,19 +40,23 @@
             this.btnConfiguracion = new FontAwesome.Sharp.IconButton();
             this.PanelMenuSuperior = new System.Windows.Forms.Panel();
             this.PanelSuperior = new System.Windows.Forms.Panel();
-            this.btnOcultarMenu = new FontAwesome.Sharp.IconButton();
-            this.btnInicio = new FontAwesome.Sharp.IconButton();
-            this.PanelInferiorPrincipal = new System.Windows.Forms.Panel();
             this.btnUsuario = new FontAwesome.Sharp.IconButton();
+            this.btnInicio = new FontAwesome.Sharp.IconButton();
+            this.btnOcultarMenu = new FontAwesome.Sharp.IconButton();
+            this.PanelSeleccion = new System.Windows.Forms.Panel();
+            this.PanelContenedor = new System.Windows.Forms.Panel();
+            this.lblMensajeMenu = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
             this.PanelMenuInferior.SuspendLayout();
             this.PanelSuperior.SuspendLayout();
+            this.PanelContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // PanelMenu
             // 
             this.PanelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
             this.PanelMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelMenu.Controls.Add(this.PanelSeleccion);
             this.PanelMenu.Controls.Add(this.btnReportes);
             this.PanelMenu.Controls.Add(this.btnVentas);
             this.PanelMenu.Controls.Add(this.btnInventarios);
@@ -65,7 +69,7 @@
             this.PanelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.PanelMenu.Location = new System.Drawing.Point(0, 0);
             this.PanelMenu.Name = "PanelMenu";
-            this.PanelMenu.Size = new System.Drawing.Size(200, 701);
+            this.PanelMenu.Size = new System.Drawing.Size(200, 709);
             this.PanelMenu.TabIndex = 0;
             // 
             // btnReportes
@@ -200,13 +204,14 @@
             this.btnClientes.Text = "Clientes";
             this.btnClientes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnClientes.UseVisualStyleBackColor = true;
+            this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
             // PanelMenuInferior
             // 
             this.PanelMenuInferior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelMenuInferior.Controls.Add(this.btnConfiguracion);
             this.PanelMenuInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelMenuInferior.Location = new System.Drawing.Point(0, 587);
+            this.PanelMenuInferior.Location = new System.Drawing.Point(0, 595);
             this.PanelMenuInferior.Name = "PanelMenuInferior";
             this.PanelMenuInferior.Size = new System.Drawing.Size(198, 112);
             this.PanelMenuInferior.TabIndex = 1;
@@ -249,8 +254,47 @@
             this.PanelSuperior.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelSuperior.Location = new System.Drawing.Point(200, 0);
             this.PanelSuperior.Name = "PanelSuperior";
-            this.PanelSuperior.Size = new System.Drawing.Size(1077, 44);
+            this.PanelSuperior.Size = new System.Drawing.Size(1191, 44);
             this.PanelSuperior.TabIndex = 1;
+            // 
+            // btnUsuario
+            // 
+            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnUsuario.FlatAppearance.BorderSize = 0;
+            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuario.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuario.ForeColor = System.Drawing.Color.White;
+            this.btnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.btnUsuario.IconColor = System.Drawing.Color.White;
+            this.btnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnUsuario.IconSize = 30;
+            this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnUsuario.Location = new System.Drawing.Point(1083, 0);
+            this.btnUsuario.Name = "btnUsuario";
+            this.btnUsuario.Size = new System.Drawing.Size(52, 40);
+            this.btnUsuario.TabIndex = 13;
+            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnUsuario.UseVisualStyleBackColor = true;
+            // 
+            // btnInicio
+            // 
+            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnInicio.FlatAppearance.BorderSize = 0;
+            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInicio.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInicio.ForeColor = System.Drawing.Color.White;
+            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
+            this.btnInicio.IconColor = System.Drawing.Color.White;
+            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnInicio.IconSize = 30;
+            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnInicio.Location = new System.Drawing.Point(1135, 0);
+            this.btnInicio.Name = "btnInicio";
+            this.btnInicio.Size = new System.Drawing.Size(52, 40);
+            this.btnInicio.TabIndex = 12;
+            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnInicio.UseVisualStyleBackColor = true;
+            this.btnInicio.Click += new System.EventHandler(this.btnInicio_Click);
             // 
             // btnOcultarMenu
             // 
@@ -272,60 +316,41 @@
             this.btnOcultarMenu.UseVisualStyleBackColor = true;
             this.btnOcultarMenu.Click += new System.EventHandler(this.btnOcultarMenu_Click);
             // 
-            // btnInicio
+            // PanelSeleccion
             // 
-            this.btnInicio.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnInicio.FlatAppearance.BorderSize = 0;
-            this.btnInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnInicio.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInicio.ForeColor = System.Drawing.Color.White;
-            this.btnInicio.IconChar = FontAwesome.Sharp.IconChar.HomeLg;
-            this.btnInicio.IconColor = System.Drawing.Color.White;
-            this.btnInicio.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnInicio.IconSize = 30;
-            this.btnInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnInicio.Location = new System.Drawing.Point(1021, 0);
-            this.btnInicio.Name = "btnInicio";
-            this.btnInicio.Size = new System.Drawing.Size(52, 40);
-            this.btnInicio.TabIndex = 12;
-            this.btnInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInicio.UseVisualStyleBackColor = true;
+            this.PanelSeleccion.BackColor = System.Drawing.Color.White;
+            this.PanelSeleccion.Location = new System.Drawing.Point(1, 132);
+            this.PanelSeleccion.Name = "PanelSeleccion";
+            this.PanelSeleccion.Size = new System.Drawing.Size(6, 45);
+            this.PanelSeleccion.TabIndex = 9;
             // 
-            // PanelInferiorPrincipal
+            // PanelContenedor
             // 
-            this.PanelInferiorPrincipal.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.PanelInferiorPrincipal.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanelInferiorPrincipal.Location = new System.Drawing.Point(200, 680);
-            this.PanelInferiorPrincipal.Name = "PanelInferiorPrincipal";
-            this.PanelInferiorPrincipal.Size = new System.Drawing.Size(1077, 21);
-            this.PanelInferiorPrincipal.TabIndex = 2;
+            this.PanelContenedor.Controls.Add(this.lblMensajeMenu);
+            this.PanelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContenedor.Location = new System.Drawing.Point(200, 44);
+            this.PanelContenedor.Name = "PanelContenedor";
+            this.PanelContenedor.Size = new System.Drawing.Size(1191, 665);
+            this.PanelContenedor.TabIndex = 3;
             // 
-            // btnUsuario
+            // lblMensajeMenu
             // 
-            this.btnUsuario.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnUsuario.FlatAppearance.BorderSize = 0;
-            this.btnUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUsuario.Font = new System.Drawing.Font("Calisto MT", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnUsuario.ForeColor = System.Drawing.Color.White;
-            this.btnUsuario.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.btnUsuario.IconColor = System.Drawing.Color.White;
-            this.btnUsuario.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnUsuario.IconSize = 30;
-            this.btnUsuario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnUsuario.Location = new System.Drawing.Point(969, 0);
-            this.btnUsuario.Name = "btnUsuario";
-            this.btnUsuario.Size = new System.Drawing.Size(52, 40);
-            this.btnUsuario.TabIndex = 13;
-            this.btnUsuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnUsuario.UseVisualStyleBackColor = true;
+            this.lblMensajeMenu.AutoSize = true;
+            this.lblMensajeMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMensajeMenu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(34)))), ((int)(((byte)(118)))));
+            this.lblMensajeMenu.Location = new System.Drawing.Point(314, 203);
+            this.lblMensajeMenu.Name = "lblMensajeMenu";
+            this.lblMensajeMenu.Size = new System.Drawing.Size(491, 46);
+            this.lblMensajeMenu.TabIndex = 0;
+            this.lblMensajeMenu.Text = "Bienvenida Menu Principal";
             // 
             // FrmMenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1277, 701);
-            this.Controls.Add(this.PanelInferiorPrincipal);
+            this.ClientSize = new System.Drawing.Size(1391, 709);
+            this.Controls.Add(this.PanelContenedor);
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
             this.Name = "FrmMenuPrincipal";
@@ -333,6 +358,8 @@
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenuInferior.ResumeLayout(false);
             this.PanelSuperior.ResumeLayout(false);
+            this.PanelContenedor.ResumeLayout(false);
+            this.PanelContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -353,7 +380,9 @@
         private FontAwesome.Sharp.IconButton btnConfiguracion;
         private FontAwesome.Sharp.IconButton btnOcultarMenu;
         private FontAwesome.Sharp.IconButton btnInicio;
-        private System.Windows.Forms.Panel PanelInferiorPrincipal;
         private FontAwesome.Sharp.IconButton btnUsuario;
+        private System.Windows.Forms.Panel PanelSeleccion;
+        private System.Windows.Forms.Panel PanelContenedor;
+        private System.Windows.Forms.Label lblMensajeMenu;
     }
 }
