@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 
 namespace CapaPresentacion
 {
@@ -15,6 +16,18 @@ namespace CapaPresentacion
         public FrmClientes()
         {
             InitializeComponent();
+        }
+
+        public void MtdMostrarClientes()
+        {
+            CD_Clientes cd_clientes = new CD_Clientes();
+            DataTable dtClientes = cd_clientes.MostrarClientes();
+            dgvClientes.DataSource = dtClientes;
+        }
+
+        private void FrmClientes_Load(object sender, EventArgs e)
+        {
+            MtdMostrarClientes();
         }
     }
 }

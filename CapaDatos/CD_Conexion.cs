@@ -10,7 +10,7 @@ namespace CapaDatos
 {
     internal class CD_Conexion
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=EMORALES\\SQLEXPRESS;Initial Catalog=db_ferreteria;Integrated Security=True;Trust Server Certificate=True");
+        private SqlConnection conexion = new SqlConnection("Data Source=EMORALES\\SQLEXPRESS;Initial Catalog=db_ferreteria;Integrated Security=True;");
 
         public SqlConnection AbrirConexion()
         {
