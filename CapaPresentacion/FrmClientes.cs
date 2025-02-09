@@ -18,11 +18,20 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+        /*    
         public void MtdMostrarClientes()
         {
             CD_Clientes cd_clientes = new CD_Clientes();
-            DataTable dtClientes = cd_clientes.MostrarClientes();
+            DataTable dtClientes = cd_clientes.MtMostrarClientes();
             dgvClientes.DataSource = dtClientes;
+        }
+        */
+
+        public void MtdMostrarClientes()
+        {
+            CD_Clientes cd_clientes = new CD_Clientes();
+            DataTable dtMostrarClientes = cd_clientes.MtMostrarClientes();
+            dgvClientes.DataSource = dtMostrarClientes;
         }
 
         private void FrmClientes_Load(object sender, EventArgs e)

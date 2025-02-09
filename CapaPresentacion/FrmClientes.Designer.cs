@@ -281,7 +281,7 @@
             // 
             this.dgvClientes.BackgroundColor = System.Drawing.Color.White;
             this.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvClientes.GridColor = System.Drawing.Color.White;
+            this.dgvClientes.GridColor = System.Drawing.Color.DarkGray;
             this.dgvClientes.Location = new System.Drawing.Point(5, 272);
             this.dgvClientes.Name = "dgvClientes";
             this.dgvClientes.RowHeadersWidth = 51;

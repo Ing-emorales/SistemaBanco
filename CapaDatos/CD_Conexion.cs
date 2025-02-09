@@ -10,21 +10,38 @@ namespace CapaDatos
 {
     internal class CD_Conexion
     {
-        private SqlConnection conexion = new SqlConnection("Data Source=EMORALES\\SQLEXPRESS;Initial Catalog=db_ferreteria;Integrated Security=True;");
+        /*
+        private SqlConnection db_conexion = new SqlConnection("Data Source=EMORALES\\SQLEXPRESS;Initial Catalog=db_ferreteria;Integrated Security=True;Encrypt=False");
 
-        public SqlConnection AbrirConexion()
+        public SqlConnection MtdAbrirConexion()
         {
-            if ( conexion.State == ConnectionState.Closed) 
-            conexion.Open();
-            return conexion;
+            if (db_conexion.State == ConnectionState.Closed)
+                db_conexion.Open();
+            return db_conexion;
         }
 
-        public SqlConnection CerrarConexion()
+        public SqlConnection MtdCerrarConexion()
         {
-            if(conexion.State == ConnectionState.Open)
-                conexion.Close();
-            return conexion;
+            if (db_conexion.State == ConnectionState.Open)
+                db_conexion.Close();
+            return db_conexion;
+        }
+        */
+
+        private SqlConnection db_conexion = new SqlConnection("Data Source=EMORALES\\SQLEXPRESS;Initial Catalog=db_ferreteria;Integrated Security=True;Encrypt=False");
+
+        public SqlConnection MtdAbrirConexion()
+        {
+            if(db_conexion.State == ConnectionState.Closed)
+                db_conexion.Open();
+            return db_conexion;
         }
 
+        public SqlConnection MtdCerrarConexion()
+        {
+            if (db_conexion.State == ConnectionState.Closed)
+                db_conexion.Close();
+            return db_conexion;
+        }
     }
 }
