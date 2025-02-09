@@ -15,7 +15,7 @@ namespace CapaDatos
 
         public DataTable MtMostrarClientes()
         {
-            string QryMostrarClientes = "Select * from tbl_clientes";
+            string QryMostrarClientes = "select * from tbl_clientes";
             SqlDataAdapter adapter = new SqlDataAdapter(QryMostrarClientes,db_conexion.MtdAbrirConexion());
             DataTable dtMostrarClientes = new DataTable();
             adapter.Fill(dtMostrarClientes);
