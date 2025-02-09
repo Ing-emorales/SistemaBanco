@@ -54,5 +54,10 @@ namespace CapaPresentacion
         {
 
         }
+
+        private void FrmMenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

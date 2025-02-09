@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.PanelMenu = new System.Windows.Forms.Panel();
+            this.PanelSeleccion = new System.Windows.Forms.Panel();
             this.btnReportes = new FontAwesome.Sharp.IconButton();
             this.btnVentas = new FontAwesome.Sharp.IconButton();
             this.btnInventarios = new FontAwesome.Sharp.IconButton();
@@ -43,7 +44,6 @@
             this.btnUsuario = new FontAwesome.Sharp.IconButton();
             this.btnInicio = new FontAwesome.Sharp.IconButton();
             this.btnOcultarMenu = new FontAwesome.Sharp.IconButton();
-            this.PanelSeleccion = new System.Windows.Forms.Panel();
             this.PanelContenedor = new System.Windows.Forms.Panel();
             this.lblMensajeMenu = new System.Windows.Forms.Label();
             this.PanelMenu.SuspendLayout();
@@ -71,6 +71,14 @@
             this.PanelMenu.Name = "PanelMenu";
             this.PanelMenu.Size = new System.Drawing.Size(200, 709);
             this.PanelMenu.TabIndex = 0;
+            // 
+            // PanelSeleccion
+            // 
+            this.PanelSeleccion.BackColor = System.Drawing.Color.White;
+            this.PanelSeleccion.Location = new System.Drawing.Point(1, 132);
+            this.PanelSeleccion.Name = "PanelSeleccion";
+            this.PanelSeleccion.Size = new System.Drawing.Size(6, 45);
+            this.PanelSeleccion.TabIndex = 9;
             // 
             // btnReportes
             // 
@@ -316,14 +324,6 @@
             this.btnOcultarMenu.UseVisualStyleBackColor = true;
             this.btnOcultarMenu.Click += new System.EventHandler(this.btnOcultarMenu_Click);
             // 
-            // PanelSeleccion
-            // 
-            this.PanelSeleccion.BackColor = System.Drawing.Color.White;
-            this.PanelSeleccion.Location = new System.Drawing.Point(1, 132);
-            this.PanelSeleccion.Name = "PanelSeleccion";
-            this.PanelSeleccion.Size = new System.Drawing.Size(6, 45);
-            this.PanelSeleccion.TabIndex = 9;
-            // 
             // PanelContenedor
             // 
             this.PanelContenedor.Controls.Add(this.lblMensajeMenu);
@@ -354,7 +354,9 @@
             this.Controls.Add(this.PanelSuperior);
             this.Controls.Add(this.PanelMenu);
             this.Name = "FrmMenuPrincipal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuPrincipal";
+            this.Load += new System.EventHandler(this.FrmMenuPrincipal_Load);
             this.PanelMenu.ResumeLayout(false);
             this.PanelMenuInferior.ResumeLayout(false);
             this.PanelSuperior.ResumeLayout(false);

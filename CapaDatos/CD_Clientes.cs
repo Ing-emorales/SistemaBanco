@@ -10,19 +10,6 @@ namespace CapaDatos
 {
     public class CD_Clientes
     {
-       /*
-       private CD_Conexion cd_conexion = new CD_Conexion();
-
-       public DataTable MostrarClientes()
-        {
-            string QueryMostrarClientes = "usp_clientes_mostrar";
-            SqlDataAdapter AdapterClientes = new SqlDataAdapter(QueryMostrarClientes, cd_conexion.MtdAbrirConexion());
-            DataTable dtMostrarClientes = new DataTable();
-            AdapterClientes.Fill(dtMostrarClientes);
-            cd_conexion.MtdCerrarConexion();
-            return dtMostrarClientes;
-        }
-       */
     
         CD_Conexion db_conexion = new CD_Conexion();
 
